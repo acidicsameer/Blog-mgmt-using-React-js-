@@ -10,32 +10,44 @@ const navigate=useNavigate()
    const handleBlog = async (data) => {
   try {
     const response = await axios.post("https://687af384abb83744b7ee48c9.mockapi.io/blog", data);
-    console.log(response)
+ console.log(data)
      if(response.status===201);
   {
-     navigate('/');
+     navigate('/')
+    
   }
+  
+     if(!response.status===201);
+  {
+     alert('error')
+    
+  }
+  
+
+  
 }
   catch( error)
   {
 console.log("error ",error)
   }
-<Cards 
+<Cards
 
 />
 
   }
   return (
-  <>
+  
 <Layout>
 
   <Form onSubmit={handleBlog}
-    name= 'Add Blogs'
-  />
-</Layout>
+    name= 'Add Blogs' />
+  
+  </Layout>
+  
+
  
   
-  </>
+  
   )
 
    }

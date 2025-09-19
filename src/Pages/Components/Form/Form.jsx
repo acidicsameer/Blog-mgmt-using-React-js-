@@ -11,7 +11,7 @@ const [data, setData] = useState({
     const { name, value } = e.target;
     setData(data => ({
       ...data,
-      [name]:  name==='image'? e.target.files[0]:value
+      [name]:  name==='image'? e.target.file[0]:value
     }));
   }
 
