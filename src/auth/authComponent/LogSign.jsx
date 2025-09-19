@@ -10,8 +10,8 @@ const LogSign = ({ name, name2, name3, name4, onSubmit }) => {
 
   function handleChange(e) {
     const { name, value } = e.target;
-    setData(prev => ({
-      ...prev,
+    setData(data => ({
+      ...data,
       [name]: value
     }));
   }

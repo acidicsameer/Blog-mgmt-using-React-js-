@@ -6,6 +6,7 @@ import Login from './auth/Login'
 import AddBlog from './Pages/blogs/AddBlog'
 import EditBlog from './Pages/blogs/EditBlog'
 import SingleBlog from './Pages/blogs/SingleBlog'
+import Contact from './Pages/blogs/Contact'
 const App = () => {
   return (
 <>
@@ -18,8 +19,8 @@ const App = () => {
 <Route  path='/login' element={<Login/>}/>
 <Route  path='/blog/add' element={<AddBlog/>}/>
 <Route  path='/blog/edit' element={<EditBlog/>}/>
-<Route  path='/blog/id' element={<SingleBlog/>}/>
-
+<Route  path='/blog/:id' element={<SingleBlog/>}/>
+<Route  path='/contact' element={<Contact/>}/>
 </Routes>
 
 

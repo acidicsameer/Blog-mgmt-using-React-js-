@@ -7,6 +7,7 @@ const Login = () => {
    const handleLogin = async (data) => {
   try {
     const response = await axios.get("https://68c7da005d8d9f5147334a8e.mockapi.io/user", data);
+    console.log(data)
      if(response.status===200)
      {
         navigate('/')
