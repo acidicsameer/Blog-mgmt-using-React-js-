@@ -16,15 +16,6 @@ const navigate=useNavigate()
      navigate('/')
     
   }
-  
-     if(!response.status===201);
-  {
-     alert('error')
-    
-  }
-  
-
-  
 }
   catch( error)
   {

@@ -11,7 +11,7 @@ const [data, setData] = useState({
     const { name, value } = e.target;
     setData(data => ({
       ...data,
-      [name]:  name==='image'? e.target.file[0]:value
+      [name]:  name==='image'? e.target.files[0]:value
     }));
   }
 
@@ -34,16 +34,25 @@ const [data, setData] = useState({
         <form  onSubmit={handleSubmit}>
         <div className="w-full">
            
-          <label className=" dark:text-white text-black text-base font-normal  leading-7">{data.title}</label><input placeholder="title" name="text" className="mt-2 w-full px-5 py-2 bg-white rounded-xl outline outline-1 outline-offset-[-1px] outline-black  overflow-hidden  text-[#898989] text-lg font-normal "  required  onChange={handleChange}/>
+          <label className=" dark:text-white text-black text-base font-normal  leading-7">Title</label><input placeholder="title" name="title" className="mt-2 w-full px-5 py-2 bg-white rounded-xl outline outline-1 outline-offset-[-1px] outline-black  overflow-hidden  text-[#898989] text-lg font-normal "  required  onChange={handleChange}/>
         </div>
-         <div className="w-full">
-            <input type="file" name="image" id=" choose file " className=" mt-2 w-full px-5 py-2 bg-white rounded-xl outline  outline-offset-[-1px] outline-black  dark:text-black text-black text-base font-normal  leading-7" />
-         </div>
+           <div className="w-full">
+              <label className="dark:text-white text-black text-base font-normal leading-7">
+                Image
+              </label>
+              <input
+                type="file"
+                name="image"
+              
+                onChange={handleChange}
+                className="mt-2 w-full px-5 py-2 bg-white rounded-xl outline outline-1 outline-offset-[-1px] outline-black text-black text-base font-normal"
+              />
+            </div>
         <div className="w-full">
-          <label className="dark:text-white text-black text-base font-normal  leading-7">subtitle</label><input placeholder="subtitle" name=" text" className="mt-2 w-full px-5 py-2 bg-white rounded-xl outline outline-1 outline-offset-[-1px] outline-black  overflow-hidden  text-[#898989] text-lg font-normal "  onChange={handleChange}  required />
+          <label className="dark:text-white text-black text-base font-normal  leading-7">subtitle</label><input placeholder="subtitle" name="subtitle" className="mt-2 w-full px-5 py-2 bg-white rounded-xl outline outline-1 outline-offset-[-1px] outline-black  overflow-hidden  text-[#898989] text-lg font-normal "  onChange={handleChange}  required />
         </div>
         <div className="w-full">
-          <label className="dark:text-white text-black text-base font-normal  leading-7">Message</label><textarea className="mt-2 w-full resize-none px-5 py-2 bg-white rounded-xl outline outline-1 outline-offset-[-1px] outline-black  overflow-hidden  text-[#898989] text-lg font-normal " placeholder="Message" name="text" cols={40} rows={10}  defaultValue={""}    onChange={handleChange} />
+          <label className="dark:text-white text-black text-base font-normal  leading-7">Message</label><textarea className="mt-2 w-full resize-none px-5 py-2 bg-white rounded-xl outline outline-1 outline-offset-[-1px] outline-black  overflow-hidden  text-[#898989] text-lg font-normal " placeholder="Message" name="message" cols={40} rows={10}  defaultValue={""}    onChange={handleChange} />
         </div>
    <button type='submit' className=" px-9 py-5 bg-[#191a23] rounded-2xl  dark:bg-white text-center dark:text-[#191a23]  text-white text-xl font-normal  leading-7"> submit now  </button>
     </form>

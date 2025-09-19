@@ -32,11 +32,6 @@ return(
 )
   })}
 
-  
-  
-   
-   
-   
    </div>
 </Layout>
 

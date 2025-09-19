@@ -11,11 +11,14 @@ const Cards = ({ blog }) => {
           <div className="px-6 py-4">
             {/* Profile image */}
             <div className="flex justify-center -mt-16 mb-4">
-              <img
-                className="w-24 h-24 rounded-full border-4 border-white object-cover shadow-lg"
-                src={blog.image}
-                alt="Profile image"
-              />
+            {blog.image && (
+  <img
+    className="w-24 h-24 rounded-full border-4 border-white object-cover shadow-lg"
+    src={blog.image}
+    alt="Profile image"
+  />
+)}
+
             </div>
             <div className="text-center mb-4">
               <h2 className="text-xl font-bold text-gray-800">{blog.title}</h2>

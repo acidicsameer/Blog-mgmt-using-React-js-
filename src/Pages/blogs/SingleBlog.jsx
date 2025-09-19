@@ -47,14 +47,27 @@ navigate("/")
 <Layout>
   
  <Cards key={blog.id} blog={blog}/>
- <div>
- <Link to='/blog/edit'>
-  <button type='submit'> Edit blog</button>
+ <div className="flex space-x-4 mt-4">
+  <Link to="/blog/edit">
+    <button
+      type="button"
+      className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200 shadow-sm"
+    >
+      Edit Blog
+    </button>
   </Link>
-   <Link to='/blog/delete'>
-  <button type='submit' onClick={deleteblog}> Delete Blog</button>
+
+  <Link to="/blog/delete">
+    <button
+      type="button"
+      onClick={deleteblog}
+      className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors duration-200 shadow-sm"
+    >
+      Delete Blog
+    </button>
   </Link>
- </div>
+</div>
+
    
    </Layout>
   )
